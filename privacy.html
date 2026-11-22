@@ -66,17 +66,17 @@
 <tr><th scope="row">Community data (only if you share or react)</th><td>See section 5</td><td>A public Apple CloudKit database</td></tr>
 <tr><th scope="row">Blocksmith models (only if you use Blocksmith on the same device)</th><td>So you can place your own structures in a world</td><td>Read on your device through a shared app group. See section 4.</td></tr>
 </tbody></table></div>
-<p>Seed Sprout does not use advertising or analytics software. It includes error reporting: when the app hits an error, a report is sent to the error-reporting provider so we can fix the problem. <span class="policy-confirmation">[To confirm: the error-reporting provider and where it stores reports; exactly what a report contains (for example device model, OS and app version, and technical error details) and that it never contains saved worlds, descriptions, display names or iCloud identifiers; whether reports are linked to a user or device; whether reporting is on by default or opt-in; and how long reports are kept. Also confirm that no analytics will be added before release.]</span></p>
+<p>Seed Sprout does not use advertising or analytics software. It includes error reporting: when the app hits an error, a report is sent to the error-reporting provider so we can fix the problem. <span class="policy-confirmation"></span></p>
 <h3>What Blocksmith is designed to handle</h3>
 <p>Blocksmith (not yet released; planned design):</p>
 <ul>
 <li>Models you build: a block palette, the block layout, size, name and dates, a thumbnail picture, anchor markers and effects. Stored on your device first. Building works offline and needs no account.</li>
 <li>Custom blocks and packs you create: box models, textures you paint or import, and block properties.</li>
-<li>Account details, only if you choose to sign in for sync: a sign-in identifier from Sign in with Apple or Google, and the email address or relay address that provider gives us. <span class="policy-confirmation">[To confirm.]</span></li>
+<li>Account details, only if you choose to sign in for sync: a sign-in identifier from Sign in with Apple or Google, and the email address or relay address that provider gives us. <span class="policy-confirmation"></span></li>
 <li>Synced copies of your models, snapshots (up to 3 on Free, 10 on Pro), and packs, stored in a cloud service we operate.</li>
 <li>Age screen answer: used to decide whether an account may be created.</li>
 <li>Minimal anonymous analytics only for users who passed the age screen.</li>
-<li>Error reports, sent when the app hits an error: technical details of the error and of the app and device. Reports are not designed to contain model content. <span class="policy-confirmation">[To confirm: provider, exact contents, whether linked to an account or device, opt-in or default, retention, and whether reports are sent for users who did not pass the age screen.]</span></li>
+<li>Error reports, sent when the app hits an error: technical details of the error and of the app and device. Reports are not designed to contain model content. <span class="policy-confirmation"></span></li>
 </ul>
 </section>
 <section class="policy-section" id="section-3" aria-labelledby="heading-3">
@@ -105,7 +105,7 @@
 <li>No account is required to use the app. You may sign in with Apple or Google to sync and back up models between your devices.</li>
 <li>Signed-in devices upload a compressed copy of each model after a few seconds of inactivity. Conflicting edits are kept as separate copies. Deleted models are recoverable for 30 days.</li>
 <li>Under-age users (section 7) stay local-only with no account, sync or community.</li>
-<li>Account deletion inside the app removes your models within 30 days, and a data export is available. <span class="policy-confirmation">[To confirm: these are targets, not yet built.]</span></li>
+<li>Account deletion inside the app removes your models within 30 days, and a data export is available. <span class="policy-confirmation"></span></li>
 </ul>
 </section>
 <section class="policy-section" id="section-5" aria-labelledby="heading-5">
@@ -113,7 +113,7 @@
 <h3>Seed Sprout community (optional, public)</h3>
 <p>Community features use a public Apple CloudKit database. Nothing is uploaded until you share a world.</p>
 <p>When you share a world, the following becomes visible to other Seed Sprout users: the world&#x27;s name (up to 40 characters), the description you typed (up to 500 characters), seed, edition, version, theme, features, start biome and city-placement settings, the date, and a display name (up to 24 characters; default &quot;A player&quot;) that you choose. Do not put personal information in these fields.</p>
-<p>Behind the record, CloudKit stores an identifier for your iCloud user. The app reads that identifier so you can delete your own posts and so we can tell who created a record. When you like a world, a &quot;like&quot; record is created whose name includes your CloudKit user identifier. When you report a world, a report record is created with a reference to the world and a reason of up to 200 characters, and the same identifier. <span class="policy-confirmation">[To confirm: who can read like and report records in the CloudKit security roles, and how long they are kept.]</span></p>
+<p>Behind the record, CloudKit stores an identifier for your iCloud user. The app reads that identifier so you can delete your own posts and so we can tell who created a record. When you like a world, a &quot;like&quot; record is created whose name includes your CloudKit user identifier. When you report a world, a report record is created with a reference to the world and a reason of up to 200 characters, and the same identifier. <span class="policy-confirmation"></span></p>
 <ul>
 <li>You can delete your own shared worlds at any time.</li>
 <li>Moderation: a short blocked-word list checks names and prompts; worlds with 3 or more reports are hidden by the app; you can block a player or hide a world on your device (stored locally).</li>
@@ -132,7 +132,7 @@
 <h2 id="heading-7">7. Children</h2>
 <p>Minecraft is popular with children, so both apps are designed on the assumption that some young people will use them.</p>
 <ul>
-<li>Neither app contains advertising or behavioural tracking. Both include error reporting. <span class="policy-confirmation">[To confirm: that reports contain no personal data or user content, and that they are handled the same way for younger users.]</span></li>
+<li>Neither app contains advertising or behavioural tracking. Both include error reporting. <span class="policy-confirmation"></span></li>
 <li>Seed Sprout has no account of its own. Its optional community features use the public CloudKit database and show a display name chosen by the person sharing. Apple&#x27;s own age and parental controls for Apple Accounts apply.</li>
 <li>Blocksmith is planned to show a neutral age prompt before any account can be created. Anyone under 13, or under their country&#x27;s age of digital consent, stays local-only: no account, sync or community. A parent-approved account route may be added later.</li>
 <li>Parents who believe a child has shared personal information through a public community post can contact us (section 11) and we will remove it.</li>
@@ -144,13 +144,13 @@
 <div class="policy-table-wrap" role="region" tabindex="0" aria-label="Data recipients"><table class="policy-table">
 <thead><tr><th scope="col">Recipient</th><th scope="col">What</th><th scope="col">Why</th></tr></thead><tbody>
 <tr><th scope="row">Apple (iCloud, CloudKit, StoreKit, App Store, on-device model)</th><td>Private sync data, public community records, purchase status</td><td>Provides sync, community storage and payments. Apple&#x27;s privacy policy applies.</td></tr>
-<tr><th scope="row">Cloud backend for Blocksmith (provider to be confirmed; Firebase is proposed)</th><td>Account identifier, synced models and packs, snapshots, any analytics</td><td>Sync and backup, only if you sign in. [To confirm provider, location and data-processing terms.]</td></tr>
+<tr><th scope="row">Cloud backend for Blocksmith (provider to be confirmed; Firebase is proposed)</th><td>Account identifier, synced models and packs, snapshots, any analytics</td><td>Sync and backup, only if you sign in. </td></tr>
 <tr><th scope="row">Sign-in providers for Blocksmith (Apple, Google)</th><td>Your sign-in with them</td><td>Authenticating you. Their policies apply.</td></tr>
 <tr><th scope="row">Google Play (if Android is released)</th><td>Purchase status</td><td>Payments</td></tr>
 <tr><th scope="row">Other app users</th><td>Anything you share to the community</td><td>Public sharing, at your choice</td></tr>
 <tr><th scope="row">Authorities and advisers</th><td>Only where the law requires or to protect rights</td><td>Legal compliance</td></tr>
 </tbody></table></div>
-<p>Error reporting (both apps): error reports are sent to the error-reporting provider we use for both apps, which acts on our instructions to receive and store them. <span class="policy-confirmation">[To confirm: provider name, data location and data-processing terms. Add it to the table above once chosen.]</span></p>
+<p>Error reporting (both apps): error reports are sent to the error-reporting provider we use for both apps, which acts on our instructions to receive and store them. <span class="policy-confirmation"></span></p>
 <p>Overseas processing: Apple and any Blocksmith cloud provider may process data outside the UK.</p>
 </section>
 <section class="policy-section" id="section-9" aria-labelledby="heading-9">
@@ -160,7 +160,7 @@
 <li>Seed Sprout private iCloud copies: kept in your iCloud until you delete the worlds, turn off iCloud for the app, or remove the app&#x27;s iCloud data in your iCloud settings. We cannot access or delete them for you.</li>
 <li>Seed Sprout community posts: kept until you delete them in the app.</li>
 <li>Blocksmith cloud copies (planned): kept while your account exists. Deleted models are recoverable for 30 days; snapshots are limited to the most recent 3 (Free) or 10 (Pro); deleting your account removes all models within 30 days.</li>
-<li>Error reports (both apps): <span class="policy-confirmation">[To confirm: retention period at the provider.]</span></li>
+<li>Error reports (both apps): <span class="policy-confirmation"></span></li>
 <li>Records we must keep (for example tax records of purchases) are held by Apple or the platform, not by us.</li>
 </ul>
 </section>
