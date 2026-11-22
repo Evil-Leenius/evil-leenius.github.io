@@ -1,0 +1,793 @@
+/* Blocksmith product page. Shared Wimji navigation and components stay intact. */
+.page-blocksmith {
+  --bs-background: #1b130f;
+  --bs-surface: #251a13;
+  --bs-cream: #f9eddb;
+  --bs-muted: #cdbdad;
+  --bs-accent: #ffa64d;
+  --bs-line: #f4cfad30;
+  --bs-gutter: clamp(22px, 5vw, 72px);
+  background: var(--bs-background);
+  color: var(--bs-cream);
+  font: 400 1rem/1.7 var(--font-ui);
+}
+
+.page-blocksmith .bs-container {
+  width: min(1200px, calc(100% - var(--bs-gutter) * 2));
+  margin-inline: auto;
+}
+
+.page-blocksmith .bs-container > *,
+.page-blocksmith .bs-split > *,
+.page-blocksmith .bs-feature-grid > *,
+.page-blocksmith .bs-assistant-grid > * {
+  min-width: 0;
+}
+
+.page-blocksmith .bs-section {
+  padding-block: clamp(76px, 8vw, 124px);
+}
+
+.page-blocksmith main :where(h1, h2, h3) {
+  color: var(--bs-cream);
+  text-wrap: balance;
+}
+
+.page-blocksmith main h2 {
+  font: 600 clamp(2.25rem, 4.5vw, 4rem)/1.08 var(--font-pixel);
+  letter-spacing: -.035em;
+}
+
+.page-blocksmith main h3 {
+  font: 600 clamp(1.6rem, 2.5vw, 2.15rem)/1.15 var(--font-pixel);
+  letter-spacing: -.025em;
+}
+
+.page-blocksmith .bs-copy p,
+.page-blocksmith .bs-feature p,
+.page-blocksmith .bs-finale-copy > p {
+  font-size: clamp(1rem, 1.18vw, 1.125rem);
+  line-height: 1.75;
+  color: var(--bs-muted);
+}
+
+.page-blocksmith .bs-copy h2 + p,
+.page-blocksmith .bs-copy h3 + p {
+  margin-top: 24px;
+}
+
+.page-blocksmith .bs-copy p + p,
+.page-blocksmith .bs-feature p + p,
+.page-blocksmith .bs-finale-copy > p + p {
+  margin-top: 18px;
+}
+
+.page-blocksmith .bs-copy h2 + h3 {
+  margin-top: 24px;
+  color: var(--bs-accent);
+}
+
+.page-blocksmith .bs-eyebrow,
+.page-blocksmith .bs-feature-kicker,
+.page-blocksmith .bs-prompt-label,
+.page-blocksmith .bs-copy p.bs-eyebrow,
+.page-blocksmith .bs-feature p.bs-feature-kicker,
+.page-blocksmith .bs-prompt p.bs-prompt-label {
+  display: block;
+  color: var(--bs-accent);
+  font: 700 .875rem/1.5 var(--font-ui);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+.page-blocksmith .bs-eyebrow + h2 {
+  margin-top: 18px;
+}
+
+.page-blocksmith .btn {
+  min-height: 48px;
+  max-width: 100%;
+  padding: 13px 22px;
+  border-radius: 6px;
+  font-size: 1rem;
+  line-height: 1.4;
+  white-space: normal;
+  text-align: center;
+  box-shadow: none;
+}
+
+.page-blocksmith .btn-orange {
+  background: var(--bs-accent);
+  color: #27170b;
+}
+
+.page-blocksmith .btn-outline {
+  border-color: #f6dbc27d;
+  color: var(--bs-cream);
+  background: #21180f66;
+}
+
+.page-blocksmith a:focus-visible,
+.page-blocksmith button:focus-visible {
+  outline: 3px solid #ffe7bb;
+  outline-offset: 5px;
+}
+
+.page-blocksmith .bs-section[id],
+.page-blocksmith .bs-smallprint[id] {
+  scroll-margin-top: 24px;
+}
+
+/* The artwork fills the hero; the copy stays in normal flow at every size. */
+.page-blocksmith .bs-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 730px;
+  background: #21160f;
+}
+
+.page-blocksmith .bs-hero-art,
+.page-blocksmith .bs-hero-shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.page-blocksmith .bs-hero-art {
+  z-index: -3;
+  object-fit: cover;
+  object-position: 72% 48%;
+}
+
+.page-blocksmith .bs-hero-shade {
+  z-index: -2;
+  background:
+    linear-gradient(0deg, #1b130f 0%, #1b130f12 24%, #1b130f00 76%, #100d0a66 100%),
+    linear-gradient(90deg, #17110df7 0%, #1b130fe8 29%, #1b130f91 51%, #1b130f14 79%, #1b130f0d 100%);
+}
+
+.page-blocksmith .bs-hero-inner {
+  display: flex;
+  align-items: center;
+  min-height: inherit;
+  padding-block: clamp(144px, 12vw, 188px) 104px;
+}
+
+.page-blocksmith .bs-hero-copy {
+  width: 60%;
+  max-width: 660px;
+}
+
+.page-blocksmith .bs-hero h1 {
+  margin: 24px 0 20px;
+  font: 700 clamp(3.4rem, 7.4vw, 7rem)/.95 var(--font-pixel);
+  letter-spacing: -.05em;
+  white-space: normal;
+  overflow-wrap: normal;
+  text-shadow: 0 4px 24px #0004;
+}
+
+.page-blocksmith .bs-tagline {
+  max-width: 24ch;
+  color: #ffce96;
+  font: 600 clamp(1.45rem, 2.25vw, 2rem)/1.35 var(--font-ui);
+  letter-spacing: -.035em;
+  text-wrap: balance;
+}
+
+.page-blocksmith .bs-hero-description {
+  max-width: 46ch;
+  margin-top: 24px;
+  color: #e1d4c6;
+  font-size: clamp(1rem, 1.3vw, 1.125rem);
+  line-height: 1.75;
+}
+
+.page-blocksmith .bs-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.page-blocksmith .bs-status {
+  display: block;
+  margin-top: 20px;
+  color: #dec2a5;
+  font: 600 .875rem/1.6 var(--font-ui);
+}
+
+.page-blocksmith .bs-art-caption {
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--bs-gutter) 22px;
+  color: #c4b4a4;
+  font: 400 .8125rem/1.6 var(--font-ui);
+  text-align: right;
+}
+
+.page-blocksmith .bs-container .bs-art-caption {
+  padding-inline: 0;
+}
+
+/* Quiet manifesto and a light editorial spread give the artwork room. */
+.page-blocksmith .bs-manifesto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: clamp(36px, 7vw, 104px);
+  row-gap: 42px;
+  padding-block: clamp(76px, 8vw, 124px);
+}
+
+.page-blocksmith .bs-manifesto > h2 {
+  max-width: 13ch;
+}
+
+.page-blocksmith .bs-signature {
+  grid-column: 1 / -1;
+  margin-top: 12px;
+  padding-top: 28px;
+  border-top: 1px solid var(--bs-line);
+  color: var(--bs-accent);
+  font: 600 clamp(1.3rem, 2.2vw, 1.8rem)/1.35 var(--font-pixel);
+  letter-spacing: -.02em;
+}
+
+.page-blocksmith .bs-blueprint {
+  --bs-cream: #352419;
+  --bs-muted: #625145;
+  --bs-accent: #9d4818;
+  --bs-line: #66452530;
+  background: #f0e5d3;
+  color: var(--bs-cream);
+}
+
+.page-blocksmith .bs-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(34px, 6.5vw, 96px);
+}
+
+.page-blocksmith .bs-visual {
+  margin: 0;
+}
+
+.page-blocksmith .bs-visual img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 3px;
+}
+
+.page-blocksmith .bs-visual figcaption,
+.page-blocksmith .bs-material-strip figcaption {
+  margin-top: 14px;
+  color: var(--bs-muted);
+  font: 400 .875rem/1.6 var(--font-ui);
+}
+
+/* Six editorial features share rules and whitespace, without card boxes. */
+.page-blocksmith .bs-features {
+  background: var(--bs-background);
+}
+
+.page-blocksmith .bs-section-heading {
+  max-width: 760px;
+  margin-bottom: 50px;
+}
+
+.page-blocksmith .bs-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(36px, 7vw, 100px);
+  row-gap: 48px;
+}
+
+.page-blocksmith .bs-feature {
+  position: relative;
+  padding-top: 30px;
+  border-top: 1px solid var(--bs-line);
+}
+
+.page-blocksmith .bs-feature-number {
+  display: block;
+  margin-bottom: 18px;
+  color: #b98d66;
+  font: 600 .875rem/1.4 var(--font-ui);
+  letter-spacing: .12em;
+}
+
+.page-blocksmith .bs-feature-kicker {
+  margin-bottom: 10px;
+}
+
+.page-blocksmith .bs-feature h3 {
+  max-width: 26ch;
+  margin-bottom: 22px;
+}
+
+.page-blocksmith .bs-feature p {
+  max-width: 56ch;
+}
+
+.page-blocksmith .bs-material-strip {
+  margin: clamp(52px, 7vw, 96px) 0 0;
+}
+
+.page-blocksmith .bs-material-strip img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2.55 / 1;
+  object-fit: cover;
+  object-position: 50% 52%;
+  border-radius: 3px;
+}
+
+.page-blocksmith .bs-material-strip figcaption {
+  text-align: right;
+}
+
+/* An example prompt sits alongside the explanation, like a workshop note. */
+.page-blocksmith .bs-assistant {
+  background:
+    radial-gradient(ellipse at 100% 15%, #78401d26, transparent 65%),
+    #251a13;
+  border-block: 1px solid var(--bs-line);
+}
+
+.page-blocksmith .bs-assistant-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+  gap: clamp(36px, 6vw, 88px);
+  align-items: start;
+}
+
+.page-blocksmith .bs-prompt {
+  padding: clamp(26px, 3.5vw, 46px);
+  border-left: 3px solid var(--bs-accent);
+  background: #100e0b54;
+  box-shadow: 0 24px 55px #0000000d;
+}
+
+.page-blocksmith .bs-prompt blockquote {
+  margin: 24px 0;
+  color: var(--bs-cream);
+  font: 500 clamp(1.55rem, 2.5vw, 2.2rem)/1.3 var(--font-pixel);
+  letter-spacing: -.025em;
+  text-wrap: pretty;
+}
+
+.page-blocksmith .bs-refinements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 28px;
+}
+
+.page-blocksmith .bs-refinements span {
+  padding: 5px 9px;
+  border: 1px solid #f0c39838;
+  border-radius: 3px;
+  color: #f0cda9;
+  font-size: .875rem;
+  line-height: 1.5;
+}
+
+.page-blocksmith .bs-prompt p {
+  color: var(--bs-muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.page-blocksmith .bs-prompt p + p {
+  margin-top: 16px;
+}
+
+.page-blocksmith .bs-prompt small {
+  display: block;
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid var(--bs-line);
+  color: #c2aa93;
+  font-size: .875rem;
+  line-height: 1.6;
+}
+
+.page-blocksmith .bs-assistant-note {
+  max-width: 78ch;
+  margin-top: 40px;
+  color: var(--bs-muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.page-blocksmith .bs-assistant .bs-signature {
+  margin-top: 36px;
+}
+
+/* The connection with Sprout has its own soft green accent. */
+.page-blocksmith .bs-sprout {
+  --bs-accent: #c6eb91;
+  --bs-muted: #becbb7;
+  --bs-line: #d9edc32e;
+  background: #162119;
+}
+
+.page-blocksmith .bs-sprout .bs-visual img {
+  aspect-ratio: 1.18 / 1;
+  object-position: 55% center;
+}
+
+.page-blocksmith .bs-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(26px, 4vw, 60px);
+  margin: clamp(48px, 6vw, 80px) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-blocksmith .bs-steps > li {
+  padding-top: 24px;
+  border-top: 1px solid var(--bs-line);
+  min-width: 0;
+}
+
+.page-blocksmith .bs-step-number {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--bs-accent);
+  font: 600 1.875rem/1 var(--font-pixel);
+}
+
+.page-blocksmith .bs-steps h3 {
+  margin-bottom: 15px;
+  font-size: clamp(1.45rem, 2.3vw, 1.8rem);
+}
+
+.page-blocksmith .bs-steps p {
+  color: var(--bs-muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.page-blocksmith .bs-sprout-close {
+  max-width: 64ch;
+  margin: 52px auto 0;
+  text-align: center;
+}
+
+.page-blocksmith .bs-sprout-close strong {
+  color: var(--bs-cream);
+}
+
+.page-blocksmith .bs-sprout-close .btn {
+  margin-top: 26px;
+}
+
+/* The final invitation remains readable over its landscape. */
+.page-blocksmith .bs-finale {
+  position: relative;
+  isolation: isolate;
+  padding-block: clamp(84px, 10vw, 150px);
+  background: #21160f;
+}
+
+.page-blocksmith .bs-finale-art {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% center;
+  opacity: .8;
+}
+
+.page-blocksmith .bs-finale::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(0deg, #1b130f 0%, #1b130f40 30%, #1b130f2b 78%, #1b130fb3 100%),
+    linear-gradient(90deg, #18110ff7 0%, #18110fe8 28%, #18110fb8 53%, #18110f28 100%);
+}
+
+.page-blocksmith .bs-finale-copy {
+  max-width: 640px;
+}
+
+.page-blocksmith .bs-finale-copy h2 {
+  max-width: 17ch;
+  margin-bottom: 28px;
+}
+
+.page-blocksmith .bs-finale-copy h3 {
+  margin: 36px 0 18px;
+  color: #ffcc92;
+}
+
+.page-blocksmith .bs-finale-copy > p.bs-closing-line {
+  margin-top: 28px;
+  color: var(--bs-cream);
+  font: 600 clamp(1.5rem, 2.6vw, 2rem)/1.3 var(--font-pixel);
+}
+
+.page-blocksmith .bs-finale-copy > p.bs-made-by {
+  margin-top: 28px;
+  color: #c3b09b;
+  font-size: .875rem;
+}
+
+.page-blocksmith .bs-finale-copy > p.bs-status {
+  color: #dec2a5;
+  font-size: .875rem;
+  line-height: 1.6;
+}
+
+.page-blocksmith .bs-smallprint {
+  padding-block: 42px 52px;
+}
+
+.page-blocksmith .bs-smallprint h2 {
+  margin-bottom: 14px;
+  font: 700 1rem/1.4 var(--font-ui);
+  letter-spacing: normal;
+}
+
+.page-blocksmith .bs-smallprint p {
+  max-width: 95ch;
+  color: #b9a998;
+  font-size: .875rem;
+  line-height: 1.7;
+}
+
+.page-blocksmith .bs-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 26px;
+  margin-top: 20px;
+  font-size: .875rem;
+}
+
+.page-blocksmith .bs-legal-links a {
+  color: #e5c7a8;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.page-blocksmith .site-header {
+  --nav-base: #25180f;
+  background: #17110edb;
+  border-color: var(--bs-line);
+}
+
+.page-blocksmith .site-header.is-scrolled,
+.page-blocksmith .product-menu {
+  background: #231810f5;
+}
+
+.page-blocksmith .nav-link:hover,
+.page-blocksmith .footer-main nav a:hover {
+  color: #ffd5a4;
+}
+
+.page-blocksmith .nav-link.nav-active::after {
+  background: var(--bs-accent);
+}
+
+.page-blocksmith .site-footer {
+  background: #130f0c;
+  border-top: 1px solid var(--bs-line);
+}
+
+.page-blocksmith .footer-bottom {
+  color: #b8aa9b;
+}
+
+@media (min-width: 700px) and (max-width: 950px) {
+  .page-blocksmith .bs-hero-copy {
+    width: 68%;
+  }
+
+  .page-blocksmith .bs-hero-shade {
+    background:
+      linear-gradient(0deg, #1b130f 0%, #1b130f12 35%, #1b130f00 100%),
+      linear-gradient(90deg, #17110ff7 0%, #1b130fcf 45%, #1b130f24 100%);
+  }
+
+  .page-blocksmith .bs-split,
+  .page-blocksmith .bs-assistant-grid {
+    gap: 32px;
+  }
+
+  .page-blocksmith .bs-assistant-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .page-blocksmith .bs-visual img {
+    aspect-ratio: 1 / 1.15;
+  }
+
+  .page-blocksmith .bs-prompt {
+    padding: 26px;
+  }
+}
+
+@media (max-width: 699px) {
+  .page-blocksmith .bs-hero {
+    min-height: 0;
+  }
+
+  .page-blocksmith .bs-hero-inner {
+    padding-block: 196px 52px;
+  }
+
+  .page-blocksmith .bs-hero-copy {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .page-blocksmith .bs-hero-art {
+    height: 540px;
+    object-position: 67% top;
+    opacity: .7;
+  }
+
+  .page-blocksmith .bs-hero-shade {
+    background:
+      linear-gradient(0deg, #1b130f 16%, #1b130fe6 44%, #1b130f66 76%, #1b130f38 100%),
+      linear-gradient(90deg, #1b130f88, #1b130f00);
+  }
+
+  .page-blocksmith .bs-hero h1 {
+    font-size: clamp(3.4rem, 11.5vw, 4.75rem);
+    margin-top: 20px;
+  }
+
+  .page-blocksmith .bs-tagline {
+    max-width: 25ch;
+    font-size: clamp(1.4rem, 5.2vw, 1.75rem);
+  }
+
+  .page-blocksmith .bs-hero-description {
+    max-width: 46ch;
+  }
+
+  .page-blocksmith .bs-art-caption {
+    text-align: left;
+    padding-bottom: 24px;
+  }
+
+  .page-blocksmith .bs-manifesto,
+  .page-blocksmith .bs-split,
+  .page-blocksmith .bs-feature-grid,
+  .page-blocksmith .bs-assistant-grid,
+  .page-blocksmith .bs-steps {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .page-blocksmith .bs-manifesto {
+    row-gap: 28px;
+  }
+
+  .page-blocksmith .bs-manifesto > h2 {
+    max-width: 18ch;
+  }
+
+  .page-blocksmith .bs-manifesto .bs-signature {
+    margin-top: 4px;
+  }
+
+  .page-blocksmith .bs-split,
+  .page-blocksmith .bs-assistant-grid {
+    gap: 34px;
+  }
+
+  .page-blocksmith .bs-section-heading {
+    margin-bottom: 34px;
+  }
+
+  .page-blocksmith .bs-feature-grid {
+    row-gap: 34px;
+  }
+
+  .page-blocksmith .bs-feature {
+    padding-top: 26px;
+  }
+
+  .page-blocksmith .bs-feature h3 {
+    max-width: 30ch;
+  }
+
+  .page-blocksmith .bs-visual img,
+  .page-blocksmith .bs-sprout .bs-visual img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .page-blocksmith .bs-material-strip img {
+    aspect-ratio: 1.5 / 1;
+  }
+
+  .page-blocksmith .bs-material-strip figcaption {
+    text-align: left;
+  }
+
+  .page-blocksmith .bs-prompt {
+    padding: 26px 24px;
+  }
+
+  .page-blocksmith .bs-assistant-note {
+    margin-top: 28px;
+  }
+
+  .page-blocksmith .bs-steps {
+    gap: 28px;
+    margin-top: 38px;
+  }
+
+  .page-blocksmith .bs-sprout-close {
+    margin-top: 38px;
+    text-align: left;
+  }
+
+  .page-blocksmith .bs-finale-art {
+    object-position: 63% center;
+    opacity: .45;
+  }
+
+  .page-blocksmith .bs-finale::before {
+    background: linear-gradient(90deg, #18110fea, #18110f9e), linear-gradient(0deg, #1b130f, #1b130f00 70%);
+  }
+
+  .page-blocksmith .bs-finale-copy {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .page-blocksmith .site-navigation {
+    background: #231810f5;
+  }
+
+  .page-blocksmith .bs-actions {
+    align-items: stretch;
+  }
+
+  .page-blocksmith .bs-actions .btn {
+    flex: 1 1 auto;
+    font-size: .9375rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-blocksmith *,
+  .page-blocksmith *::before,
+  .page-blocksmith *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Keep the village illustration within its clear, unshaded composition. */
+.page-blocksmith .bs-blueprint .bs-visual img {
+  aspect-ratio: 1;
+  object-position: left center;
+}
+
+.page-blocksmith .bs-finale-art {
+  width: 170%;
+  max-width: none;
+  right: auto;
+  object-position: left center;
+}
+.page-blocksmith .bs-finale { overflow: hidden; }
