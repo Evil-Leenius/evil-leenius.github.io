@@ -55,3 +55,22 @@ wimji-header{display:block;position:absolute;z-index:30;top:0;left:0;width:100%}
 @media(max-width:450px){.site-navigation{display:none;position:absolute;top:53px;left:0;right:0;padding:10px 22px 24px;background:#18251fe9;backdrop-filter:blur(14px);height:auto;flex-direction:column;align-items:stretch;gap:4px;border-bottom:1px solid #fff3}.site-navigation.is-open{display:flex}.site-navigation .nav-link{padding:12px 3px;font-size:15px}.menu-dropdown{width:100%}.product-menu{position:static;display:block;width:100%;margin-top:0;box-shadow:none}.mobile-menu{display:flex}.home-hero-content{top:91px}.home-hero h1{font-size:76px}.home-hero p{font-size:15px}.product-hero h1{font-size:50px}.block-hero h1{font-size:45px}.product-card{height:260px}.product-card-contents{left:14px;bottom:15px;right:10px}.product-card-title{font-size:25px}.product-card-footer{font-size:10px}.product-card-arrow{width:30px;height:30px}.product-card-symbol svg{width:27px}.endcap-copy{right:22px;max-width:53%}.endcap-copy h2{font-size:24px}.footer-main{flex-direction:column}.footer-main nav{gap:18px}.site-footer{padding:29px 22px}}
 @media(max-width:350px){.product-hero-copy{left:20px}.product-hero h1{font-size:43px}.block-hero h1{font-size:38px}.btn{padding:0 9px;font-size:10px}.product-hero-copy>p{font-size:14px}.product-card-title{font-size:22px}.product-card-symbol{height:22px}.product-card-footer{line-height:1.13}.endcap-copy h2{font-size:22px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important}.on-scroll:not(.revealed){opacity:1;translate:0 0}}
+
+/* Support and notices pages. */
+.help-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:16px;margin:30px 0}
+.help-card{padding:22px;background:#0c1c15b3;border:1px solid #baf06540;border-radius:12px}
+.help-card h2{font:700 1.25rem/1.2 var(--font-pixel);margin-bottom:10px;color:#fafbf4}
+.help-card p{color:#e3ecdf;margin:0 0 12px}
+.help-card .btn{min-height:44px}
+.faq details{border-top:1px solid #ffffff25;padding:14px 0}
+.faq details:last-child{border-bottom:1px solid #ffffff25}
+.faq summary{cursor:pointer;font-weight:700;font-size:1.05rem;padding:4px 0}
+.faq details[open] summary{color:#baf065}
+.faq details p,.faq details ul,.faq details ol{margin-top:10px;color:#e3ecdf}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:16px;margin:18px 0}
+.steps>div{padding:18px 20px;background:#0b1b1480;border:1px solid #ffffff2e;border-radius:10px}
+.steps h3{font:700 1.05rem/1.2 var(--font-pixel);color:#baf065;margin-bottom:8px}
+.legal-box{padding:18px 22px;border:1px solid #ff9c3466;background:#ff9c341a;border-radius:12px;font-weight:700;letter-spacing:.02em}
+.licence-text{white-space:pre-wrap;font:400 .875rem/1.6 ui-monospace,Menlo,monospace;color:#d6e2d3;background:#0b1b1480;padding:16px;border-radius:8px;overflow-x:auto}
+
+.help-card a{overflow-wrap:anywhere}.faq summary:focus-visible{outline:3px solid var(--lime);outline-offset:4px}.licence-text{overflow-wrap:anywhere;tab-size:2}.footer-main nav{justify-content:flex-end;row-gap:16px}.page-notices .policy-table tbody th{width:auto}.page-notices .policy-table td:nth-child(2){width:30%}@media(max-width:600px){.footer-main{flex-direction:column}.footer-main nav{justify-content:flex-start}}
